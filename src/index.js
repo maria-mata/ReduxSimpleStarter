@@ -6,8 +6,7 @@ import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
 import VideoDetail from './components/video-detail';
 
-
-import API_KEY from './api-key'
+import API_KEY from './api-key';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +29,7 @@ class App extends Component {
 
   render() {
     const videoSearch = _.debounce(term => {this.videoSearch(term)}, 300)
-    
+
     return (
       <div>
         <SearchBar onSearchTermChange={videoSearch} />
@@ -41,6 +40,6 @@ class App extends Component {
       </div>
     )
   }
-}
+};
 
 ReactDOM.render(<App/>, document.querySelector('.container'));
